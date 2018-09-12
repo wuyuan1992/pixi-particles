@@ -1,0 +1,220 @@
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex:1;
+}
+.flex-2{
+    flex:2;
+}
+.flex-3{
+    flex:3;
+}
+.flex-4{
+    flex:4;
+}
+.flex-5{
+    flex:5;
+}
+.flex-6{
+    flex:6;
+}
+.flex-7{
+    flex:7;
+}
+.flex-8{
+    flex:8;
+}
+.flex-9{
+    flex:9;
+}
+.flex-10{
+    flex:10;
+}
+.flex-11{
+    flex:11;
+}
+.flex-12{
+    flex:12
+}
+
+/* 上部 */
+.flex-top-left{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.flex-top-center{
+    align-items: flex-start;
+    justify-content: center;
+}
+.flex-top-right{
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.flex-top-between{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.flex-top-around{
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.flex-top-evenly{
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+/* 中部 */
+
+.flex-middle-left{
+    align-items: center;
+    justify-content: flex-start;
+}
+.flex-middleC-center{
+    align-items: center;
+    justify-content: center;
+}
+.flex-middle-right{
+    align-items: center;
+    justify-content: flex-end;
+}
+.flex-middle-between{
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-middle-around{
+    align-items: center;
+    justify-content: space-around;
+}
+.flex-middle-evenly{
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* 底部 */
+
+.flex-bottom-left{
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.flex-bottom-center{
+    align-items: flex-end;
+    justify-content: center;
+}
+.flex-bottom-right{
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.flex-bottom-between{
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.flex-bottom-around{
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.flex-bottom-evenly{
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+
+
+/* 竖直排列 */
+
+/* 靠左 */
+.flex-left-top{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+/* .flex-leftMiddle{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(flex-start, center);
+    flex-direction: column;
+}
+.flex-leftBottom{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(flex-start, flex-end);
+    flex-direction: column;
+}
+.flex-leftBetween{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(flex-start, space-between);
+    flex-direction: column;
+}
+.flex-leftEvenly{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(flex-start, space-evenly);
+    flex-direction: column;
+} */
+
+/* 居中 */
+
+/* .flex-centerTop{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(center, flex-start);
+    flex-direction: column;
+}
+.flex-centerMiddle{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(center, center);
+    flex-direction: column;
+}
+.flex-centerBottom{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(center, flex-end);
+    flex-direction: column;
+}
+.flex-centerBetween{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(center, space-between);
+    flex-direction: column;
+}
+.flex-centerEvenly{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(center, space-evenly);
+    flex-direction: column;
+} */
+
+/* 底部 */
+
+/* .flex-rightTop{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(flex-end, flex-start);
+    flex-direction: column;
+}
+.flex-rightMiddle{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(flex-end, center);
+    flex-direction: column;
+}
+.flex-rightBottom{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(flex-end, flex-end);
+    flex-direction: column;
+}
+.flex-rightBetween{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(flex-end, space-between);
+    flex-direction: column;
+}
+.flex-rightEvenly{
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    @include flex(flex-end, space-evenly);
+    flex-direction: column;
+} */
