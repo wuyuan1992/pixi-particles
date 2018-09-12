@@ -1,2 +1,6 @@
 @import './styles/reset.css';
 @import './styles/flex.css';
+
+.App{
+    height: 100%;
+}

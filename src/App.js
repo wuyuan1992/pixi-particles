@@ -7,10 +7,10 @@ class App extends Component {
   render() {
     return (
       <div className="App flex">
-        <div className="flex flex-1">
+        <div className="flex flex-8">
           <Board />
         </div>
-        <div className="flex flex-2">
+        <div className="flex flex-4">
           <Panel />
         </div>
       </div>

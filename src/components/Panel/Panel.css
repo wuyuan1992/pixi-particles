@@ -1,0 +1,9 @@
+.panel{
+    width: 100%;
+    height: 100%;
+    background:#fafafa;
+    overflow-y:scroll;
+}
+.panel::-webkit-scrollbar{
+    background: transparent;
+}
