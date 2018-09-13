@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
-import Board from './components/Board/Board';
-import Panel from './components/Panel/Panel';
+import{
+  Board,
+  Panel
+} from './layout';
 
 class App extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Board.css';
 
-class Board extends React.Component{
+export class Board extends React.Component{
     constructor(){
         super();
         this.state = {
@@ -87,5 +87,3 @@ class Board extends React.Component{
         )
     }
 }
-
-export default Board;
