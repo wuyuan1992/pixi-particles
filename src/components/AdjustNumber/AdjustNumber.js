@@ -23,7 +23,7 @@ export class AdjustNumber extends React.Component{
     const  { value, tick=0.1, min=0, max=100 } =this.props;
 
     return (
-      <div className='section'>
+      <div className='adjust-number'>
         <input
           type='number'
           value={value}

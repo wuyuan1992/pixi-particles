@@ -1,6 +1,6 @@
 import React from 'react';
 import './Panel.css';
-import { AdjustSection } from '../../components';
+import { PanelSection } from '../../components';
 
 export class Panel extends React.Component{
     constructor(){
@@ -16,6 +16,8 @@ export class Panel extends React.Component{
                 "scaleStart": 0.1,
                 "scaleEnd": 0.01,
                 "minimumScaleMultiplier": 1,
+
+                "customerEase":''
             }
         }
     }
@@ -32,11 +34,22 @@ export class Panel extends React.Component{
 
         return (
             <div className="panel">
-                <AdjustSection
+                <PanelSection
                     title="Scale"
                     adjusts = {[
                         { keyName:'alphaStart', value: json.alphaStart, type:'number' },
                         { keyName:'alphaEnd', value: json.alphaEnd, type:'number' }
+                    ]}
+
+                    onUpdate = { updatedData => {
+                        this.updateVal(updatedData);
+                    }}
+                />
+
+                <PanelSection
+                    title="Customer ease"
+                    adjusts = {[
+                        { keyName:'customerEase', value: json.customerEase, type:'text' },
                     ]}
 
                     onUpdate = { updatedData => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { AdjustNumber } from '../';
-import './AdjustSection.css';
+import { AdjustNumber, AdjustText } from '../';
+import './PanelSection.css';
 
 
 
@@ -20,13 +20,16 @@ function selectAdjustType(type){
         case 'number':
             return AdjustNumber;
 
+        case 'text':
+            return AdjustText;
+
         default:
             return AdjustNumber;
     }
 }
 
 
-export class AdjustSection extends React.Component{
+export class PanelSection extends React.Component{
     constructor(props){
         super(props);
 
@@ -35,6 +38,8 @@ export class AdjustSection extends React.Component{
 
     // 渲染单个校正组件
     renderAdjust( adjust, index){
+        console.log(adjust);
+        
         let AdjustComponent = selectAdjustType(adjust.type);
 
         const { onUpdate } = this.props;
@@ -51,7 +56,7 @@ export class AdjustSection extends React.Component{
         const { title, adjusts } = this.props;
 
         return (
-            <div className="panel">
+            <div className="panel-setion">
                 <h4>{ title }</h4>
                 
                 <ul className="adjusts">
