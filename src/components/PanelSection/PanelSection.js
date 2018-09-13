@@ -1,5 +1,5 @@
 import React from 'react';
-import { AdjustNumber, AdjustText } from '../';
+import { AdjustNumber, AdjustText, AdjustMeter } from '../';
 import './PanelSection.css';
 
 
@@ -11,7 +11,7 @@ function selectAdjustType(type){
     //     // 'radio' : AdjustRadio,
     //     // 'color' : AdjustColor,
     //     // 'textarea' : AdjustTxt,
-    //     // 'btn' : AdjustBtn,
+    //     // 'meter' : AdjustMeter,
     //     // 'select' : AdjustSelect,
     // }
     
@@ -22,6 +22,9 @@ function selectAdjustType(type){
 
         case 'text':
             return AdjustText;
+
+        case 'meter':
+            return AdjustMeter;
 
         default:
             return AdjustNumber;
@@ -38,7 +41,7 @@ export class PanelSection extends React.Component{
 
     // 渲染单个校正组件
     renderAdjust( adjust, index){
-        console.log(adjust);
+        // console.log(adjust);
         
         let AdjustComponent = selectAdjustType(adjust.type);
 
@@ -46,10 +49,27 @@ export class PanelSection extends React.Component{
         return (
             <li key={`adjust-${index}`} >
                 {
-                    <AdjustComponent {...adjust} onUpdate={ onUpdate } />
+                    <AdjustComponent
+                        {...adjust}
+                        onUpdate={ (keyName, val)=>{
+                            this.updateValue(keyName, val) } 
+                        } />
                 }
             </li>
         )
+    }
+
+    updateValue(keyName, val){
+        const  { onUpdate } =this.props;
+    
+        // console.log(keyName);
+    
+        let updatedData = {};
+        updatedData[ keyName ] = val;
+    
+        // console.log(updatedData);
+    
+        onUpdate(updatedData);
     }
 
     render(){

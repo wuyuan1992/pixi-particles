@@ -37,8 +37,8 @@ export class Panel extends React.Component{
                 <PanelSection
                     title="Scale"
                     adjusts = {[
-                        { keyName:'alphaStart', value: json.alphaStart, type:'number' },
-                        { keyName:'alphaEnd', value: json.alphaEnd, type:'number' }
+                        { keyName:'scaleStart', value: json.scaleStart, type:'number' },
+                        { keyName:'scaleEnd', value: json.scaleEnd, type:'number' }
                     ]}
 
                     onUpdate = { updatedData => {
@@ -50,6 +50,17 @@ export class Panel extends React.Component{
                     title="Customer ease"
                     adjusts = {[
                         { keyName:'customerEase', value: json.customerEase, type:'text' },
+                    ]}
+
+                    onUpdate = { updatedData => {
+                        this.updateVal(updatedData);
+                    }}
+                />
+
+                <PanelSection
+                    title="Alpha Start"
+                    adjusts = {[
+                        { keyName:'alphaStart', value: json.alphaStart, type:'meter' },
                     ]}
 
                     onUpdate = { updatedData => {
