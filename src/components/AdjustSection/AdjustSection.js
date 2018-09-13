@@ -16,8 +16,6 @@ function selectAdjustType(type){
     // }
     
     // return adjustTypes[ adjust.type ] || AdjustNumber;
-
-
     switch(type){
         case 'number':
             return AdjustNumber;
@@ -37,7 +35,7 @@ export class AdjustSection extends React.Component{
 
     // 渲染单个校正组件
     renderAdjust( adjust, index){
-        const AdjustComponent = AdjustNumber;
+        let AdjustComponent = selectAdjustType(adjust.type);
 
         const { onUpdate } = this.props;
         return (
